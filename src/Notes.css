@@ -1,0 +1,63 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.note {
+  width: 200px;
+  height: auto;
+  float: left;
+  background-color: yellow;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+  margin: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: all .3s;
+}
+
+.note:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.note-creator {
+  float: bottom;
+  margin: 10px;
+}
+
+.note-delete {
+  position: absolute;
+  top:5px;
+  right:5px;
+  display: none;
+  color: rgba(0,0,0,0.6);
+  cursor: pointer;
+}
+
+.note:hover .note-delete {
+  display: block;
+}
