@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import './index.css';
 import Notes from './Notes';
 import registerServiceWorker from './registerServiceWorker';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 
 const initialState = {
     notes: []
@@ -16,11 +15,11 @@ function reducer(state = initialState, action) {
             return {
                 notes: [{
                     id: 0,
-                    text: "oleh",
+                    text: "test1",
                     color: "#FFD700"
                 }, {
                     id: 1,
-                    text: "ira",
+                    text: "test2",
                     color: "#7FFFD4"
                 }]
             };
@@ -50,7 +49,6 @@ function reducer(state = initialState, action) {
         default:
             return state;
     }
-    // return state;
 }
 
 const store = createStore(reducer);

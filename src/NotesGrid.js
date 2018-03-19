@@ -7,7 +7,6 @@ class NotesGrid extends React.Component {
     componentDidMount() {
         this.msnry = new Masonry(this.refs.grid, {
             itemSelector: '.note',
-            // columnWidth: 200,
             gutter: 10,
             isFitWidth: true
         })
