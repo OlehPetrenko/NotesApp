@@ -4,9 +4,6 @@ import Note from './Note';
 
 import Masonry from 'masonry-layout'
 
-
-// import * as Masonry from "masonry-layout"
-
 class NotesGrid extends React.Component {
     componentDidMount() {
         this.msnry = new Masonry(this.refs.grid, {
