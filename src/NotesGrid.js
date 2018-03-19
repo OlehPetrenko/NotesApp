@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import Note from './Note';
-
 import Masonry from 'masonry-layout'
 
 class NotesGrid extends React.Component {
