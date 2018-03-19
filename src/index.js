@@ -29,7 +29,7 @@ function reducer(state = initialState, action) {
                 var note = {
                     id: state.notes.length !== 0 ? state.notes[state.notes.length - 1].id + 1 : 0,
                     text: action.noteText,
-                    color: "#7FFAD4"
+                    color: action.noteColor
                 }
 
                 return {

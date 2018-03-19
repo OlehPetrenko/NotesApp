@@ -61,3 +61,7 @@
 .note:hover .note-delete {
   display: block;
 }
+
+.color-picker {
+  position: relative;
+}
