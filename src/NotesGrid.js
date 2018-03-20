@@ -20,7 +20,7 @@ class NotesGrid extends React.Component {
     }
 
     render() {
-        return <div ref="grid">
+        return <div className="notes-grid" ref="grid">
             {
                 this.props.notes.map(
                     (note) => <div key={note.id} >
