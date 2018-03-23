@@ -12,22 +12,20 @@ const initialState = {
 function reducer(state = initialState, action) {
     switch (action.type) {
         case 'LOAD_NOTES':
-            return {
-                notes: [{
-                    id: 0,
-                    text: "test1",
-                    color: "#FFD700"
-                }, {
-                    id: 1,
-                    text: "test2",
-                    color: "#7FFFD4"
-                }]
-            };
+            {
+                var localNotes = JSON.parse(localStorage.getItem('notes'));
+                if (localNotes)
+                    return {
+                        notes: localNotes
+                    };
+
+                return state;
+            }
 
         case 'ADD_NOTE':
             {
                 var note = {
-                    id: state.notes.length !== 0 ? state.notes[state.notes.length - 1].id + 1 : 0,
+                    id: Date.now(),
                     text: action.noteText,
                     color: action.noteColor
                 }
@@ -37,7 +35,7 @@ function reducer(state = initialState, action) {
                 };
             }
 
-            case 'DELETE_NOTE':
+        case 'DELETE_NOTE':
             {
                 var filteredNotes = state.notes.filter(note => note.id !== action.noteId);
 

@@ -9,6 +9,15 @@ class Notes extends Component {
         this.props.loadNotes();
     }
 
+    componentDidUpdate() {
+        this.saveNoteToLocalStorage();
+    }
+
+    saveNoteToLocalStorage() {
+        var notes = JSON.stringify(this.props.notes);
+        localStorage.setItem('notes', notes);
+    }
+
     render() {
         return (
             <div>

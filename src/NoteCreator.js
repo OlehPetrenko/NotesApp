@@ -4,29 +4,25 @@ import { CirclePicker } from 'react-color';
 
 class NoteCreator extends React.Component {
     componentWillMount() {
-        this.setNoteText('');
-    }
-
-    setNoteText(text) {
-        this.setState({ noteText: text });
+        this.setState({ noteText: '' });
     }
 
     onAddNote() {
         if (this.state.noteText === '')
             return;
-            
+
         this.props.addNote(this.state.noteText, this.state.noteColor);
 
-        this.setNoteText('');
+        this.setState({ noteText: '' });
         this.setState({ noteColor: '' });
 
     }
 
     handleTextChange(event) {
-        this.setNoteText(event.target.value);
+        this.setState({ noteText: event.target.value });
     }
 
-    handleChangeColor = (color, event) => {
+    handleChangeColor(color, event) {
         this.setState({ noteColor: color.hex });
     };
 
