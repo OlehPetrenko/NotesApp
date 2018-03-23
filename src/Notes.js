@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import logo from './logo.svg';
 import NoteGrid from './NotesGrid';
 import NotesCreator from './NoteCreator';
 import './Notes.css';
